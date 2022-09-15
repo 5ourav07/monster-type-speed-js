@@ -148,27 +148,38 @@ button {
 }
 
 #histories {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .card {
   width: 100%;
   height: 100%;
   padding: 50px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(92.49deg,
-      rgba(255, 255, 255, 0.1) 0.18%,
-      rgba(255, 255, 255, 0.05) 99.85%);
+  background: linear-gradient(92.49deg, rgba(255, 255, 255, 0.1) 0.18%, rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+}
+
+.card h3 {
+  color: #9dffad;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 #modal-background {
@@ -191,5 +202,9 @@ button {
 
   .card {
     flex-direction: column;
+  }
+
+  #histories {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
