@@ -81,9 +81,9 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <button onclick="closeModal()">Close</button>
+    <p style="margin-top: 10px;">You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p style="margin-top: 10px;">You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <button style="margin-top: 20px;" onclick="closeModal()">Close</button>
   `;
 
   addHistory(questionText, timeTaken, errorCount);
