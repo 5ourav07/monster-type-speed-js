@@ -22,6 +22,7 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
+  window.onkeydown = function (e) { return !(e.keyCode == 32); }; //keyCode of space is 32
 
   // Handle backspace press
   if (newLetter == "Backspace") {
